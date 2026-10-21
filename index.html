@@ -570,88 +570,19 @@
                 <span class="year-small">2027</span>
             </div>
             <div class="weekdays"></div>
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Plume et Paroles · 2027</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
-        }
-
-        body {
-            background: #f5f0eb;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 1.5rem;
-        }
-
-        .calendar-wrapper {
-            max-width: 1300px;
-            width: 100%;
-        }
-
-        .title {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .title h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 4px;
-            color: #2c2c2c;
-            text-transform: uppercase;
-            border-bottom: 3px double #b0a28e;
-            display: inline-block;
-            padding-bottom: 0.75rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            font-family: 'Georgia', 'Times New Roman', serif;
-            font-style: italic;
-        }
-
-        .title h1 span {
-            font-style: normal;
-            font-weight: 700;
-            color: #8b6b4d;
-        }
-
-        .title p {
-            margin-top: 0.8rem;
-            font-size: 1.1rem;
-            color: #5e5e5e;
-            letter-spacing: 2px;
-        }
-
-        /* page = 3 months block */
-        .page {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.8rem;
-            <!DOCTYPE html>
+   12340span.empty2027<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Plume et Paroles · 2027</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <title>YVL · La Plume et Paroles · 2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, sans-serif; }
         
         body {
-            background: #0f1419;
-            background-image: 
-                radial-gradient(at 20% 10%, rgba(180, 167, 255, 0.08) 0px, transparent 50%),
-                radial-gradient(at 80% 90%, rgba(125, 211, 192, 0.06) 0px, transparent 50%);
-            color: #f5f5f7;
+            background: #000000;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -661,34 +592,28 @@
 
         .calendar-wrapper { max-width: 1300px; width: 100%; position: relative; }
         
-        /* Language Toggle */
         .lang-toggle {
             position: absolute; top: 0; right: 0;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: #000000;
+            border: 1px solid #333333;
             padding: 0.6rem 1.2rem;
-            border-radius: 100px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #c8ccd4;
-            letter-spacing: 0.5px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             transition: all 0.3s ease;
         }
-        .lang-toggle:hover {
-            background: rgba(180, 167, 255, 0.12);
-            border-color: rgba(180, 167, 255, 0.3);
-            color: #f5f5f7;
-        }
+        .lang-toggle:hover { background: #ffffff; color: #000000; border-color: #ffffff; }
 
         .title { text-align: center; margin-bottom: 3.5rem; margin-top: 1rem; }
         .title h1 {
-            font-size: 3.2rem;
-            font-weight: 300;
-            letter-spacing: 6px;
-            color: #f5f5f7;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 8px;
+            color: #ffffff;
             text-transform: uppercase;
             margin-bottom: 0.8rem;
         }
@@ -701,925 +626,153 @@
         .title h1 .year-mark {
             font-family: 'Inter', sans-serif;
             font-style: normal;
-            font-weight: 300;
-            color: #b4a7ff;
+            font-weight: 800;
+            color: #dc2626; /* YVL Red */
             letter-spacing: 8px;
             margin-left: 1rem;
         }
         .title p {
-            font-size: 0.85rem;
-            color: #8b92a0;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-
-        /* Holiday Legend */
-        .holiday-legend {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 0.8rem;
-            color: #8b92a0;
-            letter-spacing: 0.5px;
-        }
-        .legend-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            box-shadow: 0 0 8px currentColor;
-        }
-        .dot-fr { background: #60a5fa; color: #60a5fa; }
-        .dot-ke { background: #34d399; color: #34d399; }
-        .dot-both { background: #c084fc; color: #c084fc; }
-
-        /* Page blocks */
-        .page {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            padding: 2rem;
-            border-radius: 24px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: all 0.4s ease;
-        }
-        .page:hover {
-            border-color: rgba(180, 167, 255, 0.15);
-        }
-
-        /* Month Cards */
-        .month-card {
-            flex: 1 1 280px;
-            max-width: 340px;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 1.5rem 1.3rem 1.3rem;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .month-card:hover {
-            transform: translateY(-2px);
-            border-color: rgba(180, 167, 255, 0.25);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(180, 167, 255, 0.1);
-        }
-
-        .month-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1.2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .month-name {
-            font-size: 1.5rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            color: #f5f5f7;
-            text-transform: uppercase;
-        }
-        .year-small {
             font-size: 0.75rem;
-            font-weight: 500;
-            color: #8b92a0;
-            letter-spacing: 2px;
-        }
-
-        .weekdays {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            text-align: center;
-            font-size: 0.65rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #6b7280;
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
-        }
-
-        .days-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 0.25rem;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: #d1d5db;
-            margin-bottom: 1.2rem;
-        }
-        .days-grid span {
-            padding: 0.45rem 0;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            position: relative;
-            cursor: default;
-        }
-        .days-grid span.empty {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .days-grid span:not(.empty) {
-            cursor: pointer;
-        }
-        .days-grid span:not(.empty):hover {
-            background: rgba(180, 167, 255, 0.12);
-            color: #f5f5f7;
-        }
-
-        /* Holiday Indicators */
-        .days-grid span.holiday {
-            font-weight: 500;
-        }
-        .days-grid span.holiday::after {
-            content: '';
-            position: absolute;
-            bottom: 4px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-        }
-        .days-grid span.holiday-fr::after { background: #60a5fa; box-shadow: 0 0 6px #60a5fa; }
-        .days-grid span.holiday-ke::after { background: #34d399; box-shadow: 0 0 6px #34d399; }
-        .days-grid span.holiday-both::after { background: #c084fc; box-shadow: 0 0 6px #c084fc; }
-        
-        /* Planner note indicator */
-        .days-grid span.has-note::before {
-            content: '';
-            position: absolute;
-            top: 4px;
-            right: 6px;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: #b4a7ff;
-            box-shadow: 0 0 6px #b4a7ff;
-        }
-
-        /* Motivation block */
-        .motivation-block {
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            display: flex;
-            flex-direction: column;
-            gap: 0.7rem;
-        }
-        .quote {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-style: italic;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #c8ccd4;
-            text-align: center;
-            padding: 0.6rem 0.8rem;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 10px;
-            border-left: 2px solid rgba(180, 167, 255, 0.3);
-        }
-        .monument {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-size: 0.72rem;
-            font-weight: 500;
-            color: #8b92a0;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .monument-icon {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        .footer-note {
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 0.75rem;
-            color: #6b7280;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
-
-        /* Planner Modal */
-        .modal-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(15, 20, 25, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .modal-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
-        .modal-content {
-            background: rgba(30, 35, 45, 0.9);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 450px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-        }
-        .modal-overlay.active .modal-content {
-            transform: translateY(0);
-        }
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .modal-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: #f5f5f7;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-        .modal-close {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #8b92a0;
-            transition: color 0.2s;
-            line-height: 1;
-        }
-        .modal-close:hover { color: #f5f5f7; }
-        
-        .modal-textarea {
-            width: 100%;
-            min-height: 140px;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            color: #f5f5f7;
-            font-family: inherit;
-            font-size: 0.95rem;
-            resize: vertical;
-            margin-bottom: 1.5rem;
-            transition: all 0.2s ease;
-        }
-        .modal-textarea:focus {
-            outline: none;
-            border-color: rgba(180, 167, 255, 0.4);
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .modal-textarea::placeholder { color: #6b7280; }
-        
-        .modal-actions {
-            display: flex;
-            gap: 0.8rem;
-            justify-content: flex-end;
-        }
-        .btn {
-            padding: 0.7rem 1.4rem;
-            border-radius: 100px;
-            border: none;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-        }
-        .btn-save {
-            background: #b4a7ff;
-            color: #0f1419;
-        }
-        .btn-save:hover {
-            background: #c8bdff;
-            box-shadow: 0 4px 12px rgba(180, 167, 255, 0.3);
-        }
-        .btn-cancel {
-            background: transparent;
-            color: #8b92a0;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        .btn-cancel:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: #f5f5f7;
-        }
-
-        @media (max-width: 850px) {
-            body { padding: 2rem 1rem; }
-            .title h1 { font-size: 2.2rem; letter-spacing: 4px; }
-            .title h1 .year-mark { display: block; margin: 0.5rem 0 0 0; }
-            .page { padding: 1.5rem 1rem; gap: 1rem; }
-            .month-card { max-width: 100%; }
-            .lang-toggle { position: static; margin: 0 auto 2rem; display: block; }
-            .title { margin-top: 0; }
-        }
-        @media (max-width: 500px) {
-            .month-name { font-size: 1.2rem; }
-            .days-grid { font-size: 0.8rem; }
-            .quote { font-size: 0.85rem; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="calendar-wrapper">
-    <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">🇬🇧 English</button>
-    
-    <div class="title">
-        <h1>
-            <span class="brand" data-fr="La Plume et Paroles" data-en="The Pen and Words">La Plume et Paroles</span>
-            <span class="year-mark">✧ 2027 ✧</span>
-        </h1>
-        <p data-fr="Calendrier & Planificateur" data-en="Calendar & Planner">Calendrier & Planificateur</p>
-    </div>
-
-    <div class="holiday-legend">
-        <div class="legend-item"><div class="legend-dot dot-fr"></div> <span data-fr="France" data-en="France">France</span></div>
-        <div class="legend-item"><div class="legend-dot dot-ke"></div> <span data-fr="Kenya" data-en="Kenya">Kenya</span></div>
-        <div class="legend-item"><div class="legend-dot dot-both"></div> <span data-fr="Les deux" data-en="Both">Both</span></div>
-    </div>
-
-    <!-- PAGE 1 : JANUARY – FEBRUARY – MARCH -->
-    <div class="page page-1">
-        <div class="month-card" data-month="0">
-            <div class="month-header">
-                <span class="month-name" data-fr="Janvier" data-en="January">Janvier</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="jan-2027"></div>
-            <div class="motivation-block">
-                <div class="quote" data-fr="Chaque pas ouvre une nouvelle page" data-en="Every step opens a new page">Chaque pas ouvre une nouvelle page</div>
-                <div class="monument"><span class="monument-icon">🗼</span> <span data-fr="Tour Eiffel" data-en="Eiffel Tower">Tour Eiffel</span></div>
-            </div>
-        </div>
-        <div class="month-card" data-month="1">
-            <div class="month-header">
-                <span class="month-name" data-fr="Février" data-en="February">Février</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="feb-2027"></div>
-            <div class="motivation-block">
-                <div class="quote" data-fr="La constance est la clé des grands desseins" data-en="Consistency is the key to great designs">La constance est la clé des grands desseins</div>
-                <div class="monument"><span class="monument-icon">🏛️</span> <span data-fr="Arc de Triomphe" data-en="Arc de Triomphe">Arc de Triomphe</span></div>
-            </div>
-        </div>
-        <div class="month-card" data-month="2">
-            <div class="month-header">
-                <span class="month-name" data-fr="Mars" data-en="March">Mars</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="mar-2027"></div>
-            <div class="motivation-block">
-                <div class="quote" data-fr="Le printemps commence dans le cœur" data-en="Spring begins in the heart">Le printemps commence dans le cœur</div>
-                <div class="monument"><span class="monument-icon">🏰</span> <span data-fr="Château de Chambord" data-en="Château de Chambord">Château de Chambord</span></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PAGE 2 : APRIL – MAY – JUNE -->
-    <div class="page page-2">
-        <div class="month-card" data-month="3">
-            <div class="month-header">
-                <span class="month-name" data-fr="Avril" data-en="April">Avril</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="apr-2027"></div>
-            <div class="motivation-block">
-                <div class="quote" data-fr="Renouvelle ton esprit, cultive ta joie" data-en="Renew your mind, cultivate your joy">Renouvelle ton esprit, cultive ta joie</div>
-                <div class="monument"><span class="monument-icon">🏛️</span> <span data-fr="Palais des Papes" data-en="Palace of the Popes">Palais des Papes</span></div>
-            </div>
-        </div>
-        <div class="month-card" data-month="4">
-            <div class="month-header">
-                <span class="month-name" data-fr="Mai" data-en="May">Mai</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="may-2027"></div>
-            <div class="motivation-block">
-                <div class="quote" data-fr="La persévérance transforme les rêves en réalité" data-en="Perseverance turns dreams into reality">La persévérance transforme les rêves en réalité</div>
-                <div class="monument"><span class="monument-icon">🏰</span> <span data-fr="Cité de Carcassonne" data-en="Cité de Carcassonne">Cité de Carcassonne</span></div>
-            </div>
-        </div>
-        <div class="month-card" data-month="5">
-            <div class="month-header">
-                <span class="month-name" data-fr="Juin" data-en="June">Juin</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Plume et Paroles · 2027</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
-        }
-
-        body {
-            background: #f5f0eb;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 1.5rem;
-        }
-
-        .calendar-wrapper {
-            max-width: 1300px;
-            width: 100%;
-        }
-
-        .title {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .title h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 4px;
-            color: #2c2c2c;
-            text-transform: uppercase;
-            border-bottom: 3px double #b0a28e;
-            display: inline-block;
-            padding-bottom: 0.75rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            font-family: 'Georgia', 'Times New Roman', serif;
-            font-style: italic;
-        }
-
-        .title h1 span {
-            font-style: normal;
-            font-weight: 700;
-            color: #8b6b4d;
-        }
-
-        .title p {
-            margin-top: 0.8rem;
-            font-size: 1.1rem;
-            color: #5e5e5e;
-            letter-spacing: 2px;
-        }
-
-        /* page = 3 months block */
-        .page {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.8rem;
-            <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Plume et Paroles · 2027</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-        
-        body {
-            background: #0f1419;
-            background-image: 
-                radial-gradient(at 20% 10%, rgba(180, 167, 255, 0.08) 0px, transparent 50%),
-                radial-gradient(at 80% 90%, rgba(125, 211, 192, 0.06) 0px, transparent 50%);
-            color: #f5f5f7;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 3rem 1.5rem;
-            min-height: 100vh;
-        }
-
-        .calendar-wrapper { max-width: 1300px; width: 100%; position: relative; }
-        
-        /* Language Toggle */
-        .lang-toggle {
-            position: absolute; top: 0; right: 0;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 0.6rem 1.2rem;
-            border-radius: 100px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #c8ccd4;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-        .lang-toggle:hover {
-            background: rgba(180, 167, 255, 0.12);
-            border-color: rgba(180, 167, 255, 0.3);
-            color: #f5f5f7;
-        }
-
-        .title { text-align: center; margin-bottom: 3.5rem; margin-top: 1rem; }
-        .title h1 {
-            font-size: 3.2rem;
-            font-weight: 300;
+            color: #71717a;
             letter-spacing: 6px;
-            color: #f5f5f7;
             text-transform: uppercase;
-            margin-bottom: 0.8rem;
-        }
-        .title h1 .brand {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-style: italic;
-            font-weight: 400;
-            letter-spacing: 4px;
-        }
-        .title h1 .year-mark {
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
-            font-weight: 300;
-            color: #b4a7ff;
-            letter-spacing: 8px;
-            margin-left: 1rem;
-        }
-        .title p {
-            font-size: 0.85rem;
-            color: #8b92a0;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-weight: 400;
+            font-weight: 600;
         }
 
-        /* Holiday Legend */
-        .holiday-legend {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 0.8rem;
-            color: #8b92a0;
-            letter-spacing: 0.5px;
-        }
-        .legend-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            box-shadow: 0 0 8px currentColor;
-        }
-        .dot-fr { background: #60a5fa; color: #60a5fa; }
-        .dot-ke { background: #34d399; color: #34d399; }
-        .dot-both { background: #c084fc; color: #c084fc; }
+        .holiday-legend { display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.7rem; color: #a1a1aa; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+        .legend-dot { width: 8px; height: 8px; border-radius: 0; transform: rotate(45deg); } /* Diamond shape for YVL vibe */
+        .dot-fr { background: #60a5fa; }
+        .dot-ke { background: #34d399; }
+        .dot-both { background: #dc2626; }
 
-        /* Page blocks */
         .page {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            padding: 2rem;
-            border-radius: 24px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+            margin-bottom: 2.5rem; padding: 2rem;
+            border-radius: 0; /* Sharp edges */
+            background: #050505;
+            border: 1px solid #1a1a1a;
             transition: all 0.4s ease;
         }
-        .page:hover {
-            border-color: rgba(180, 167, 255, 0.15);
-        }
+        .page:hover { border-color: #333333; }
 
-        /* Month Cards */
         .month-card {
-            flex: 1 1 280px;
-            max-width: 340px;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
+            flex: 1 1 280px; max-width: 340px;
+            background: #0a0a0a;
+            border: 1px solid #222222;
+            border-radius: 0; /* Sharp edges */
             padding: 1.5rem 1.3rem 1.3rem;
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
+            display: flex; flex-direction: column;
         }
         .month-card:hover {
             transform: translateY(-2px);
-            border-color: rgba(180, 167, 255, 0.25);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(180, 167, 255, 0.1);
+            border-color: #dc2626;
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.15);
         }
 
         .month-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1.2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex; justify-content: space-between; align-items: baseline;
+            margin-bottom: 1.2rem; padding-bottom: 0.8rem;
+            border-bottom: 1px solid #222222;
         }
         .month-name {
-            font-size: 1.5rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            color: #f5f5f7;
-            text-transform: uppercase;
+            font-size: 1.3rem; font-weight: 800; letter-spacing: 3px;
+            color: #ffffff; text-transform: uppercase;
         }
-        .year-small {
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: #8b92a0;
-            letter-spacing: 2px;
-        }
+        .year-small { font-size: 0.7rem; font-weight: 600; color: #52525b; letter-spacing: 2px; }
 
         .weekdays {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            text-align: center;
-            font-size: 0.65rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #6b7280;
-            margin-bottom: 0.6rem;
-            padding: 0.4rem 0;
+            display: grid; grid-template-columns: repeat(7, 1fr); text-align: center;
+            font-size: 0.6rem; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 1px; color: #52525b; margin-bottom: 0.6rem;
         }
 
         .days-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 0.25rem;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: #d1d5db;
+            display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.25rem;
+            text-align: center; font-size: 0.85rem; font-weight: 400; color: #a1a1aa;
             margin-bottom: 1.2rem;
         }
         .days-grid span {
-            padding: 0.45rem 0;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            position: relative;
-            cursor: default;
+            padding: 0.45rem 0; border-radius: 0; transition: all 0.2s ease;
+            position: relative; cursor: default;
         }
-        .days-grid span.empty {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .days-grid span:not(.empty) {
-            cursor: pointer;
-        }
-        .days-grid span:not(.empty):hover {
-            background: rgba(180, 167, 255, 0.12);
-            color: #f5f5f7;
-        }
+        .days-grid span.empty { opacity: 0; pointer-events: none; }
+        .days-grid span:not(.empty) { cursor: pointer; }
+        .days-grid span:not(.empty):hover { background: #ffffff; color: #000000; font-weight: 800; }
 
-        /* Holiday Indicators */
-        .days-grid span.holiday {
-            font-weight: 500;
-        }
+        .days-grid span.holiday { font-weight: 800; color: #ffffff; }
         .days-grid span.holiday::after {
-            content: '';
-            position: absolute;
-            bottom: 4px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
+            content: ''; position: absolute; bottom: 4px; left: 50%;
+            transform: translateX(-50%) rotate(45deg); width: 5px; height: 5px;
         }
-        .days-grid span.holiday-fr::after { background: #60a5fa; box-shadow: 0 0 6px #60a5fa; }
-        .days-grid span.holiday-ke::after { background: #34d399; box-shadow: 0 0 6px #34d399; }
-        .days-grid span.holiday-both::after { background: #c084fc; box-shadow: 0 0 6px #c084fc; }
+        .days-grid span.holiday-fr::after { background: #60a5fa; }
+        .days-grid span.holiday-ke::after { background: #34d399; }
+        .days-grid span.holiday-both::after { background: #dc2626; }
         
-        /* Planner note indicator */
         .days-grid span.has-note::before {
-            content: '';
-            position: absolute;
-            top: 4px;
-            right: 6px;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: #b4a7ff;
-            box-shadow: 0 0 6px #b4a7ff;
+            content: ''; position: absolute; top: 4px; right: 4px;
+            width: 4px; height: 4px; background: #dc2626;
         }
 
-        /* Motivation block */
         .motivation-block {
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            display: flex;
-            flex-direction: column;
-            gap: 0.7rem;
+            margin-top: auto; padding-top: 1rem;
+            border-top: 1px solid #222222;
+            display: flex; flex-direction: column; gap: 0.7rem;
         }
         .quote {
             font-family: 'Playfair Display', Georgia, serif;
-            font-style: italic;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #c8ccd4;
-            text-align: center;
-            padding: 0.6rem 0.8rem;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 10px;
-            border-left: 2px solid rgba(180, 167, 255, 0.3);
+            font-style: italic; font-size: 0.9rem; line-height: 1.5;
+            color: #e5e5e5; text-align: center; padding: 0.8rem;
+            background: #000000; border: 1px solid #222222;
         }
         .monument {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-size: 0.72rem;
-            font-weight: 500;
-            color: #8b92a0;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .monument-icon {
-            font-size: 1rem;
-            opacity: 0.9;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            font-size: 0.65rem; font-weight: 800; color: #52525b;
+            letter-spacing: 3px; text-transform: uppercase;
         }
 
-        .footer-note {
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 0.75rem;
-            color: #6b7280;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
+        .footer-note { text-align: center; margin-top: 3rem; font-size: 0.7rem; color: #333333; letter-spacing: 6px; text-transform: uppercase; font-weight: 800; }
 
-        /* Planner Modal */
+        /* Modal */
         .modal-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(15, 20, 25, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); backdrop-filter: blur(8px);
+            display: none; justify-content: center; align-items: center;
+            z-index: 1000; opacity: 0; transition: opacity 0.3s ease;
         }
-        .modal-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
+        .modal-overlay.active { display: flex; opacity: 1; }
         .modal-content {
-            background: rgba(30, 35, 45, 0.9);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 450px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
+            background: #0a0a0a; border: 1px solid #333333;
+            padding: 2rem; border-radius: 0; width: 90%; max-width: 450px;
+            box-shadow: 0 0 40px rgba(220, 38, 38, 0.1);
+            transform: translateY(20px); transition: transform 0.3s ease;
         }
-        .modal-overlay.active .modal-content {
-            transform: translateY(0);
-        }
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .modal-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: #f5f5f7;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-        .modal-close {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #8b92a0;
-            transition: color 0.2s;
-            line-height: 1;
-        }
-        .modal-close:hover { color: #f5f5f7; }
-        
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #222; padding-bottom: 1rem; }
+        .modal-title { font-family: 'Inter', sans-serif; font-size: 1.2rem; font-weight: 800; color: #ffffff; letter-spacing: 2px; text-transform: uppercase; }
+        .modal-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #52525b; transition: color 0.2s; }
+        .modal-close:hover { color: #dc2626; }
         .modal-textarea {
-            width: 100%;
-            min-height: 140px;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            color: #f5f5f7;
-            font-family: inherit;
-            font-size: 0.95rem;
-            resize: vertical;
+            width: 100%; min-height: 140px; padding: 1rem;
+            background: #000000; border: 1px solid #333333; border-radius: 0;
+            color: #ffffff; font-family: 'Inter', sans-serif; font-size: 0.9rem; resize: vertical;
             margin-bottom: 1.5rem;
-            transition: all 0.2s ease;
         }
-        .modal-textarea:focus {
-            outline: none;
-            border-color: rgba(180, 167, 255, 0.4);
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .modal-textarea::placeholder { color: #6b7280; }
-        
-        .modal-actions {
-            display: flex;
-            gap: 0.8rem;
-            justify-content: flex-end;
-        }
-        .btn {
-            padding: 0.7rem 1.4rem;
-            border-radius: 100px;
-            border: none;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-        }
-        .btn-save {
-            background: #b4a7ff;
-            color: #0f1419;
-        }
-        .btn-save:hover {
-            background: #c8bdff;
-            box-shadow: 0 4px 12px rgba(180, 167, 255, 0.3);
-        }
-        .btn-cancel {
-            background: transparent;
-            color: #8b92a0;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        .btn-cancel:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: #f5f5f7;
-        }
+        .modal-textarea:focus { outline: none; border-color: #dc2626; }
+        .modal-actions { display: flex; gap: 0.8rem; justify-content: flex-end; }
+        .btn { padding: 0.7rem 1.4rem; border-radius: 0; border: none; font-weight: 800; cursor: pointer; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; transition: all 0.2s; }
+        .btn-save { background: #dc2626; color: #ffffff; }
+        .btn-save:hover { background: #ffffff; color: #dc2626; }
+        .btn-cancel { background: transparent; color: #71717a; border: 1px solid #333333; }
+        .btn-cancel:hover { border-color: #ffffff; color: #ffffff; }
 
         @media (max-width: 850px) {
-            body { padding: 2rem 1rem; }
-            .title h1 { font-size: 2.2rem; letter-spacing: 4px; }
+            .title h1 { font-size: 2rem; letter-spacing: 4px; }
             .title h1 .year-mark { display: block; margin: 0.5rem 0 0 0; }
-            .page { padding: 1.5rem 1rem; gap: 1rem; }
+            .page { padding: 1.5rem 1rem; }
             .month-card { max-width: 100%; }
             .lang-toggle { position: static; margin: 0 auto 2rem; display: block; }
-            .title { margin-top: 0; }
-        }
-        @media (max-width: 500px) {
-            .month-name { font-size: 1.2rem; }
-            .days-grid { font-size: 0.8rem; }
-            .quote { font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -1631,7 +784,7 @@
     <div class="title">
         <h1>
             <span class="brand" data-fr="La Plume et Paroles" data-en="The Pen and Words">La Plume et Paroles</span>
-            <span class="year-mark">✧ 2027 ✧</span>
+            <span class="year-mark"> 2027 ✧</span>
         </h1>
         <p data-fr="Calendrier & Planificateur" data-en="Calendar & Planner">Calendrier & Planificateur</p>
     </div>
@@ -1642,39 +795,27 @@
         <div class="legend-item"><div class="legend-dot dot-both"></div> <span data-fr="Les deux" data-en="Both">Both</span></div>
     </div>
 
-    <!-- PAGE 1 : JANUARY – FEBRUARY – MARCH -->
+    <!-- PAGE 1 -->
     <div class="page page-1">
         <div class="month-card" data-month="0">
-            <div class="month-header">
-                <span class="month-name" data-fr="Janvier" data-en="January">Janvier</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="jan-2027"></div>
+            <div class="month-header"><span class="month-name" data-fr="Janvier" data-en="January">Janvier</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="jan-2027"></div>
             <div class="motivation-block">
                 <div class="quote" data-fr="Chaque pas ouvre une nouvelle page" data-en="Every step opens a new page">Chaque pas ouvre une nouvelle page</div>
                 <div class="monument"><span class="monument-icon">🗼</span> <span data-fr="Tour Eiffel" data-en="Eiffel Tower">Tour Eiffel</span></div>
             </div>
         </div>
         <div class="month-card" data-month="1">
-            <div class="month-header">
-                <span class="month-name" data-fr="Février" data-en="February">Février</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="feb-2027"></div>
+            <div class="month-header"><span class="month-name" data-fr="Février" data-en="February">Février</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="feb-2027"></div>
             <div class="motivation-block">
                 <div class="quote" data-fr="La constance est la clé des grands desseins" data-en="Consistency is the key to great designs">La constance est la clé des grands desseins</div>
                 <div class="monument"><span class="monument-icon">🏛️</span> <span data-fr="Arc de Triomphe" data-en="Arc de Triomphe">Arc de Triomphe</span></div>
             </div>
         </div>
         <div class="month-card" data-month="2">
-            <div class="month-header">
-                <span class="month-name" data-fr="Mars" data-en="March">Mars</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="mar-2027"></div>
+            <div class="month-header"><span class="month-name" data-fr="Mars" data-en="March">Mars</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="mar-2027"></div>
             <div class="motivation-block">
                 <div class="quote" data-fr="Le printemps commence dans le cœur" data-en="Spring begins in the heart">Le printemps commence dans le cœur</div>
                 <div class="monument"><span class="monument-icon">🏰</span> <span data-fr="Château de Chambord" data-en="Château de Chambord">Château de Chambord</span></div>
@@ -1682,35 +823,109 @@
         </div>
     </div>
 
-    <!-- PAGE 2 : APRIL – MAY – JUNE -->
+    <!-- PAGE 2 -->
     <div class="page page-2">
         <div class="month-card" data-month="3">
-            <div class="month-header">
-                <span class="month-name" data-fr="Avril" data-en="April">Avril</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="apr-2027"></div>
+            <div class="month-header"><span class="month-name" data-fr="Avril" data-en="April">Avril</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="apr-2027"></div>
             <div class="motivation-block">
                 <div class="quote" data-fr="Renouvelle ton esprit, cultive ta joie" data-en="Renew your mind, cultivate your joy">Renouvelle ton esprit, cultive ta joie</div>
                 <div class="monument"><span class="monument-icon">🏛️</span> <span data-fr="Palais des Papes" data-en="Palace of the Popes">Palais des Papes</span></div>
             </div>
         </div>
         <div class="month-card" data-month="4">
-            <div class="month-header">
-                <span class="month-name" data-fr="Mai" data-en="May">Mai</span>
-                <span class="year-small">2027</span>
-            </div>
-            <div class="weekdays"></div>
-            <div class="days-grid" id="may-2027"></div>
+            <div class="month-header"><span class="month-name" data-fr="Mai" data-en="May">Mai</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="may-2027"></div>
             <div class="motivation-block">
                 <div class="quote" data-fr="La persévérance transforme les rêves en réalité" data-en="Perseverance turns dreams into reality">La persévérance transforme les rêves en réalité</div>
                 <div class="monument"><span class="monument-icon">🏰</span> <span data-fr="Cité de Carcassonne" data-en="Cité de Carcassonne">Cité de Carcassonne</span></div>
             </div>
         </div>
         <div class="month-card" data-month="5">
-            <div class="month-header">
-                <span class="month-name" data-fr="Juin" data-en="June">Juin</span>
-                <span class="year-small">2027</span>
+            <div class="month-header"><span class="month-name" data-fr="Juin" data-en="June">Juin</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="jun-2027"></div>
+            <div class="motivation-block">
+                <div class="quote" data-fr="L'audace est le premier pas vers la réussite" data-en="Audacity is the first step toward success">L'audace est le premier pas vers la réussite</div>
+                <div class="monument"><span class="monument-icon">⛪</span> <span data-fr="Mont Saint-Michel" data-en="Mont Saint-Michel">Mont Saint-Michel</span></div>
             </div>
-            <div class="weekdays"></div>
+        </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page page-3">
+        <div class="month-card" data-month="6">
+            <div class="month-header"><span class="month-name" data-fr="Juillet" data-en="July">Juillet</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="jul-2027"></div>
+            <div class="motivation-block">
+                <div class="quote" data-fr="Savoure l'instant, il est une œuvre d'art" data-en="Savor the moment, it is a work of art">Savoure l'instant, il est une œuvre d'art</div>
+                <div class="monument"><span class="monument-icon">🏛️</span> <span data-fr="Palais de Versailles" data-en="Palace of Versailles">Palais de Versailles</span></div>
+            </div>
+        </div>
+        <div class="month-card" data-month="7">
+            <div class="month-header"><span class="month-name" data-fr="Août" data-en="August">Août</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="aug-2027"></div>
+            <div class="motivation-block">
+                <div class="quote" data-fr="La lumière intérieure guide tes pas" data-en="Inner light guides your steps">La lumière intérieure guide tes pas</div>
+                <div class="monument"><span class="monument-icon">🌉</span> <span data-fr="Pont du Gard" data-en="Pont du Gard">Pont du Gard</span></div>
+            </div>
+        </div>
+        <div class="month-card" data-month="8">
+            <div class="month-header"><span class="month-name" data-fr="Septembre" data-en="September">Septembre</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="sep-2027"></div>
+            <div class="motivation-block">
+                <div class="quote" data-fr="Chaque fin est un nouveau commencement" data-en="Every ending is a new beginning">Chaque fin est un nouveau commencement</div>
+                <div class="monument"><span class="monument-icon">🏛️</span> <span data-fr="Basilique de Fourvière" data-en="Basilica of Fourvière">Basilique de Fourvière</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="page page-4">
+        <div class="month-card" data-month="9">
+            <div class="month-header"><span class="month-name" data-fr="Octobre" data-en="October">Octobre</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="oct-2027"></div>
+            <div class="motivation-block">
+                <div class="quote" data-fr="Récolte la sagesse que tu as semée" data-en="Harvest the wisdom you have sown">Récolte la sagesse que tu as semée</div>
+                <div class="monument"><span class="monument-icon">🏰</span> <span data-fr="Château de Chenonceau" data-en="Château de Chenonceau">Château de Chenonceau</span></div>
+            </div>
+        </div>
+        <div class="month-card" data-month="10">
+            <div class="month-header"><span class="month-name" data-fr="Novembre" data-en="November">Novembre</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="nov-2027"></div>
+            <div class="motivation-block">
+                <div class="quote" data-fr="La gratitude éclaire même les jours gris" data-en="Gratitude illuminates even the grayest days">La gratitude éclaire même les jours gris</div>
+                <div class="monument"><span class="monument-icon">🏛️</span> <span data-fr="Panthéon" data-en="Panthéon">Panthéon</span></div>
+            </div>
+        </div>
+        <div class="month-card" data-month="11">
+            <div class="month-header"><span class="month-name" data-fr="Décembre" data-en="December">Décembre</span><span class="year-small">2027</span></div>
+            <div class="weekdays"></div><div class="days-grid" id="dec-2027"></div>
+            <div class="motivation-block">
+                <div class="quote" data-fr="Termine l'année avec un cœur léger" data-en="Finish the year with a light heart">Termine l'année avec un cœur léger</div>
+                <div class="monument"><span class="monument-icon">⛪</span> <span data-fr="Sacré-Cœur" data-en="Sacré-Cœur">Sacré-Cœur</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note" data-fr="✧ yvl · la plume et paroles · 2027 ✧" data-en="✧ yvl · the pen and words · 2027 ✧">✧ yvl · la plume et paroles · 2027 ✧</div>
+</div>
+
+<div class="modal-overlay" id="plannerModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modalDateTitle">Date</h3>
+            <button class="modal-close" onclick="closeModal()">×</button>
+        </div>
+        <textarea class="modal-textarea" id="plannerNote" data-fr-placeholder="Ajoutez vos notes ici..." data-en-placeholder="Add your notes here..." placeholder="Ajoutez vos notes ici..."></textarea>
+        <div class="modal-actions">
+            <button class="btn btn-cancel" onclick="closeModal()" data-fr="Fermer" data-en="Close">Fermer</button>
+            <button class="btn btn-save" onclick="saveNote()" data-fr="Enregistrer" data-en="Save">Enregistrer</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const year = 2027; let currentLang = 'fr';
+    const holidays2027 = {
+        "2027-01-01": { fr: "Jour de l'an", en: "New Year's Day", type: "both" },
+        "2027-03-10": { fr: "Aïd el-Fitr",0
