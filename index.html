@@ -925,11 +925,97 @@
 </div>
 
 <script>
-    const year = 2027; let currentLang = 'fr';
+    const year = 2027; 
+    let currentLang = 'fr';
+    
     const holidays2027 = {
         "2027-01-01": { fr: "Jour de l'an", en: "New Year's Day", type: "both" },
-        "2027-03-10": { fr: "Aïd el-Fitr",0
-document.addEventListener('DOMContentLoaded', () => { ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'].forEach((id,i)=>renderMonth(year,i,`${id}-2027`)); });
+        "2027-03-10": { fr: "Aïd el-Fitr", en: "Eid al-Fitr", type: "ke" },
+        "2027-03-26": { fr: "Vendredi saint", en: "Good Friday", type: "ke" },
+        "2027-03-29": { fr: "Lundi de Pâques", en: "Easter Monday", type: "both" },
+        "2027-05-01": { fr: "Fête du Travail", en: "Labour Day", type: "both" },
+        "2027-05-06": { fr: "Ascension", en: "Ascension Day", type: "fr" },
+        "2027-05-08": { fr: "Victoire 1945", en: "Victory Day", type: "fr" },
+        "2027-05-17": { fr: "Lundi de Pentecôte", en: "Whit Monday", type: "fr" },
+        "2027-06-01": { fr: "Madaraka Day", en: "Madaraka Day", type: "ke" },
+        "2027-07-14": { fr: "Fête nationale", en: "Bastille Day", type: "fr" },
+        "2027-08-15": { fr: "Assomption", en: "Assumption", type: "fr" },
+        "2027-10-10": { fr: "Mazingira Day", en: "Mazingira Day", type: "ke" },
+        "2027-10-20": { fr: "Mashujaa Day", en: "Mashujaa Day", type: "ke" },
+        "2027-11-01": { fr: "Toussaint", en: "All Saints", type: "fr" },
+        "2027-11-11": { fr: "Armistice", en: "Armistice Day", type: "fr" },
+        "2027-12-12": { fr: "Jamhuri Day", en: "Jamhuri Day", type: "ke" },
+        "2027-12-25": { fr: "Noël", en: "Christmas", type: "both" },
+        "2027-12-26": { fr: "Boxing Day", en: "Boxing Day", type: "ke" }
+    };
+
+    const translations = { 
+        fr: { weekdays: ["Lu","Ma","Me","Je","Ve","Sa","Di"], langBtn: "🇬🇧 English" }, 
+        en: { weekdays: ["Mo","Tu","We","Th","Fr","Sa","Su"], langBtn: "🇫🇷 Français" } 
+    };
+    let activeDate = null;
+
+    function daysInMonth(y, m) { return new Date(y, m+1, 0).getDate(); }
+    function firstWeekday(y, m) { return (new Date(y, m, 1).getDay() + 6) % 7; }
+
+    function renderMonth(y, m, id) {
+        const c = document.getElementById(id); 
+        if(!c) return;
+        const card = c.closest('.month-card');
+        if(card) {
+            card.querySelector('.weekdays').innerHTML = translations[currentLang].weekdays.map(d=>`<span>${d}</span>`).join('');
+        }
+        const total = daysInMonth(y,m), offset = firstWeekday(y,m);
+        c.innerHTML = '';
+        for(let i=0; i<offset; i++) { const s=document.createElement('span'); s.className='empty'; c.appendChild(s); }
+        for(let d=1; d<=total; d++) {
+            const s = document.createElement('span'); 
+            s.textContent = d;
+            const ds = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+            s.dataset.date = ds;
+            if(holidays2027[ds]) { 
+                s.classList.add('holiday', `holiday-${holidays2027[ds].type}`); 
+                s.title = holidays2027[ds][currentLang]; 
+            }
+            if(localStorage.getItem(`planner_${ds}`)) s.classList.add('has-note');
+            s.addEventListener('click', () => openModal(ds, d, m));
+            c.appendChild(s);
+        }
+        const rem = (offset+total)%7; 
+        if(rem) for(let i=0; i<7-rem; i++) { const s=document.createElement('span'); s.className='empty'; c.appendChild(s); }
+    }
+
+    function toggleLanguage() {
+        currentLang = currentLang==='fr'?'en':'fr';
+        document.getElementById('langToggle').textContent = translations[currentLang].langBtn;
+        document.querySelectorAll('[data-fr]').forEach(el => el.textContent = el.getAttribute(`data-${currentLang}`));
+        document.querySelectorAll('[data-fr-placeholder]').forEach(el => el.placeholder = el.getAttribute(`data-${currentLang}-placeholder`));
+        ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'].forEach((id,i)=>renderMonth(year,i,`${id}-2027`));
+    }
+
+    function openModal(ds, d, m) {
+        activeDate = ds;
+        const names = currentLang==='fr'?["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]:["January","February","March","April","May","June","July","August","September","October","November","December"];
+        document.getElementById('modalDateTitle').textContent = `${d} ${names[m]} ${year}`;
+        document.getElementById('plannerNote').value = localStorage.getItem(`planner_${ds}`)||'';
+        document.getElementById('plannerModal').classList.add('active');
+    }
+    function closeModal() { document.getElementById('plannerModal').classList.remove('active'); activeDate=null; }
+    function saveNote() {
+        if(!activeDate) return;
+        const note = document.getElementById('plannerNote').value.trim();
+        if(note) localStorage.setItem(`planner_${activeDate}`, note); 
+        else localStorage.removeItem(`planner_${activeDate}`);
+        const s = document.querySelector(`span[data-date="${activeDate}"]`);
+        if(s) { if(note) s.classList.add('has-note'); else s.classList.remove('has-note'); }
+        closeModal();
+    }
+    document.getElementById('plannerModal').addEventListener('click', e => { if(e.target.id==='plannerModal') closeModal(); });
+    
+    // THIS IS WHAT DRAWS THE DATES
+    document.addEventListener('DOMContentLoaded', () => { 
+        ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'].forEach((id,i)=>renderMonth(year,i,`${id}-2027`)); 
+    });
 </script>
 </body>
 </html>
